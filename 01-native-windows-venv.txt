@@ -1,0 +1,36 @@
+native windows
+>> conda create --name tf python=3.9
+>> conda activate tf
+(tf) >>conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+(tf) >>pip install --upgrade pip
+(tf) >>pip install "tensorflow<2.11" 
+(tf) >>python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+(tf) >>python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+
+
+>> wsl
+>> curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
+>> bash Miniconda3-latest-Linux-x86_64.sh
+exit your shell and render from powershell
+>> exit
+
+wsl
+>> curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
+>> bash Miniconda3-latest-Linux-x86_64.sh
+>> exit 
+>> wsl (power shell)
+>> conda install -y jupyter
+>> conda create --name tf python=3.9
+(tf) >> nvidia-smi
+(tf) >> conda install -c conda-forge cudatoolkit=11.8.0
+(tf) >> pip install nvidia-cudnn-cu11==8.6.0.163
+(tf) >> CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
+(tf) >> export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
+(tf) >> mkdir -p $CONDA_PREFIX/etc/conda/activate.d
+(tf) >> echo 'CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+(tf) >> echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+(tf) >> pip install --upgrade pip
+(tf) >> pip install tensorflow<2.11     (not on tf website)
+(tf) >> python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+(tf) >> python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"

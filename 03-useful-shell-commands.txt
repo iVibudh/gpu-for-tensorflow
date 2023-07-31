@@ -1,0 +1,32 @@
+linux commands 
+- wsl 
+
+https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/
+- Remove conda env 
+	- conda env list 
+	- conda remove --name ENV_NAME --all
+	- turn windows features
+	
+
+https://queirozf.com/entries/jupyter-kernels-how-to-add-change-remove
+- Remove jupyter kernesl
+	- jupyter kernelspec list
+	- jupyter kernelspec remove <kernel-name>
+
+Uninstall wsl for windows 11
+cmd
+>>wsl -l -v
+>> wsl --unregister ubuntu
+
+
+- open the directory in explorer 
+	# explorer.exe
+
+
+venv
+tf -> has cuda + pytorch installed 
+tf3 -> has tensorflow and cuda installed. 
+- Jupyter 505 error 
+- tensorflow does not have access to the GPU
+venv -> (llama-2-exp)
+

@@ -1,0 +1,28 @@
+C:\Users\vibud\AppData\Local\Programs\Microsoft VS Code\bin
+C:\Users\vibud\AppData\Local\Microsoft\WindowsApps
+C:\ProgramData\anaconda3\Library\bin
+C:\ProgramData\anaconda3\Scripts
+C:\ProgramData\anaconda3\condabin
+C:\ProgramData\anaconda3\
+
+
+
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\bin
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\libnvvp
+
+
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\extras\CUPTI\lib64
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include
+
+
+C:\tools\cudnn-windows-x86_64-8.9.3.28_cuda12-archive\bin
+C:\tools\cudnn-windows-x86_64-8.9.3.28_cuda12-archive\include
+
+
+Activate Tensorflow envitonment:
+C:\Users\vibud>conda create -y --name tensorflow python=3
+conda activate tensorflow
+X----- conda install ipykernel
+python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
+
+python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"

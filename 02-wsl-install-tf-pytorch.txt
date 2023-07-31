@@ -1,0 +1,94 @@
+install pytorch --> https://www.youtube.com/watch?v=r9IqwpMR9TE&t=616s&ab_channel=PythonSimplified
+	- (base) >> <<<<<<<<install miniconda>>>>>>>>>>>>
+	- (base) >> conda create --name tf python=3.9
+	- (base) >> conda activate tf
+	- (tf) >> conda install -c pytorch pytorch
+	- (tf) >> pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+	- [ref](https://joelognn.medium.com/installing-wsl2-pytorch-and-cuda-on-windows-11-65a739158d76)
+	- conda install -c anaconda jupyter
+	- jupyter notebook
+
+
+
+YT-- > https://www.youtube.com/watch?v=0S81koZpwPA
+blog --> https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-march-2023.ipynb
+
+
+- cmd 
+>>wsl --install 
+restart
+
+<<<<<<<<install miniconda>>>>>>>>>>>>
+- go to https://www.tensorflow.org/install/pip#windows-wsl2_1
+- power shell
+- download miniconda
+>> curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
+- install miniconda
+>> bash Miniconda3-latest-Linux-x86_64.sh
+>> exit -- Done
+
+
+>> wsl
+(base)>> exit
+- see you have a (base) now
+<<<<<<<<install miniconda>>>>>>>>>>>>
+
+
+- go to tf website again
+(base) >> conda create --name tf python=3.9
+(base) >> conda activate tf
+(tf) >> nvidia-smi
+- check if gpu is there
+- grapghics driver: NVIDIA-SMI 525.89.02 | Version: 528.49 | CUDA Ver : 12.0
+- we need to install cuda 11 
+# (tf) >> exit
+(tf) >> conda install -c conda-forge cudatoolkit=11.8.0
+(tf) >> pip install nvidia-cudnn-cu11==8.6.0.163
+(tf) >> mkdir -p $CONDA_PREFIX/etc/conda/activate.d echo 'CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+(tf) >> echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+(tf) >> pip install --upgrade pip
+(tf) >> pip install tensorflow==2.12.*
+(tf) >> exit 
+(base) >> exit
+- reboot machine - DONE
+
+
+- power shell
+- wsl
+(base) >> conda activate tf 
+
+- check CPU
+(tf) >> python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+- check GPU
+(tf) >> python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+DONE - GPU and CPU both present 
+
+Lets create a jpyter notebook
+
+
+- add Jupyter support to your new environment.
+# (base) >> conda install -y jupyter 
+
+(tf) >> conda install -c conda-forge nb_conda
+(tf) >> 
+(tf) >> jupyter notebook
+
+Python code on NB
+# What version of Python do you have?
+import sys
+
+import tensorflow.keras
+import pandas as pd
+import sklearn as sk
+import tensorflow as tf
+
+print(f"Tensor Flow Version: {tf.__version__}")
+print(f"Keras Version: {tensorflow.keras.__version__}")
+print()
+print(f"Python {sys.version}")
+print(f"Pandas {pd.__version__}")
+print(f"Scikit-Learn {sk.__version__}")
+gpu = len(tf.config.list_physical_devices('GPU'))>0
+print("GPU is", "available" if gpu else "NOT AVAILABLE")
