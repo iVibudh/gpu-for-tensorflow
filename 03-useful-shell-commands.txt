@@ -23,10 +23,24 @@ cmd
 	# explorer.exe
 
 
+- Clear cache memory in NVIDIA-GPU
+	- "%appdata%" in search 
+	- Go to "AppData/Local/NVIDIA Corporation/NV Cache"
+		- Delete everything in this folder 
+	- Go to "AppData/Local/NVIDIA"
+		- Delete everything in this folder
+	- Go to "AppData/Local/Temp/"
+		- Delete
+	- Go to "C:/ProgramData/NVIDIA Corporation/NV Cache
+- Clear cache memory in AMD
+	- 
+
 venv
 tf -> has cuda + pytorch installed 
 tf3 -> has tensorflow and cuda installed. 
 - Jupyter 505 error 
 - tensorflow does not have access to the GPU
 venv -> (llama-2-exp)
+
+
 
