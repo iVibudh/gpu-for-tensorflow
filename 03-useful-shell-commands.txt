@@ -24,6 +24,7 @@ cmd
 
 
 - Clear cache memory in NVIDIA-GPU
+	- nvidia-smi --gpu-reset
 	- "%appdata%" in search 
 	- Go to "AppData/Local/NVIDIA Corporation/NV Cache"
 		- Delete everything in this folder 
