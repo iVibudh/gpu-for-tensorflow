@@ -1,0 +1,43 @@
+
+cmd >> wsl 
+(base)>> conda create -n  opensource-llama2 python==3.11.3
+(base)>> conda activate  opensource-llama2
+(opensource-llama2) >> pip install --upgrade pip
+
+(opensource-llama2) >> pip install "openllm[llama]"
+
+- verify
+(opensource-llama2) >> openllm -h
+
+
+- In order to run GPTQ, make sure to install 
+(opensource-llama2) >> pip install "openllm[gptq]"
+
+
+(opensource-llama2) >> openllm start llama --model-id NousResearch/Llama-2-70b-hf --quantize gptq --device 0
+Details: 
+	- GGML vs GPTQ
+		- GGML is another quantization implementation focused on CPU
+		- if you're using NVIDIA hardware and your entire model will fit in VRAM, GPTQ will be faster
+
+Gave error 
+(opensource-llama2) >> conda install scipy
+(opensource-llama2) >> conda install chardet
+Try open start again
+
+pip install --upgrade "jax[cuda11_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+
+
+
+
+Abhishek's trick for not downloading the llama model every time 
+-v /data:/data 
+
+
+
+   Successfully uninstalled nvidia-cudnn-cu11-8.5.0.96
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torch 2.0.1 requires nvidia-cublas-cu11==11.10.3.66; platform_system == "Linux" and platform_machine == "x86_64", but you have nvidia-cublas-cu11 11.11.3.6 which is incompatible.
+torch 2.0.1 requires nvidia-cuda-cupti-cu11==11.7.101; platform_system == "Linux" and platform_machine == "x86_64", but you have nvidia-cuda-cupti-cu11 11.8.87 which is incompatible.
+torch 2.0.1 requires nvidia-cuda-runtime-cu11==11.7.99; platform_system == "Linux" and platform_machine == "x86_64", but you have nvidia-cuda-runtime-cu11 11.8.89 which is incompatible.
+torch 2.0.1 requires nvidia-cudnn-cu11==8.5.0.96; platform_system == "Linux" and platform_machine == "x86_64", but you have nvidia-cudnn-cu11 8.9.2.26 which is incompatible.
