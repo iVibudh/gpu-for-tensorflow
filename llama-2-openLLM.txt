@@ -2,7 +2,7 @@
 cmd >> wsl 
 (base)>> conda create -n  opensource-llama2 python==3.11.3
 (base)>> conda activate  opensource-llama2
-(opensource-llama2) >> pip install --upgrade pip
+(opensource-llama2) >> pip install --upgrade pippip 
 
 (opensource-llama2) >> pip install "openllm[llama]"
 

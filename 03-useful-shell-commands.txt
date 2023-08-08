@@ -36,6 +36,13 @@ cmd
 - Clear cache memory in AMD
 	- 
 
+
+List all envs
+	- conda info --envs
+Delecte an env itself
+	- conda remove --name tf3 --all
+
+
 venv
 tf -> has cuda + pytorch installed 
 tf3 -> has tensorflow and cuda installed. 
