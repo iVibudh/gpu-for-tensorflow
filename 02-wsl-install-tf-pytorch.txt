@@ -4,7 +4,8 @@ install pytorch --> https://www.youtube.com/watch?v=r9IqwpMR9TE&t=616s&ab_channe
 	- (base) >> conda activate tf
 	- (tf) >> conda install -c pytorch pytorch
 	- (tf) >> pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-	- [ref](https://joelognn.medium.com/installing-wsl2-pytorch-and-cuda-on-windows-11-65a739158d76)
+	- [ref1](https://joelognn.medium.com/installing-wsl2-pytorch-and-cuda-on-windows-11-65a739158d76)
+	- [ref2](https://pytorch.org/get-started/locally/)
 	- conda install -c anaconda jupyter
 	- jupyter notebook
 
