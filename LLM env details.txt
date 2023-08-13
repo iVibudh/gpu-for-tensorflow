@@ -1,0 +1,23 @@
+conda create --name tf python=3.9
+	- Python 3.9
+(tf)>> conda install -c conda-forge cudatoolkit=11.8.0
+(tf)>> pip install nvidia-cudnn-cu11==8.6.0.163
+>> pip install tensorflow==2.13.*
+
+
+conda create -n open-llm python=3.9
+pip install openllm
+openllm - h
+- pip install spicy
+openllm start opt
+
+
+go to localhost:3000
+
+openllm -h
+
+
+import openllm
+client = openllm.client.HTTPClient('http://localhost:3000')
+client.query('Explain to me the difference between "further" and "farther"')
+

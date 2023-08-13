@@ -10,12 +10,15 @@ files to support gpu installation on windows/wsl and ubuntu
 <hr />
 
 ### References
+- 1. Installation Tensorflow on GPU Desktop
+    - (NEW) [Installation steps on YT by Jeff](https://www.youtube.com/watch?v=0S81koZpwPA&ab_channel=JeffHeaton)
 
-- (NEW) [Installation steps on YT by Jeff](https://www.youtube.com/watch?v=0S81koZpwPA&ab_channel=JeffHeaton)
-
-- [Official tensorflow installation Guide](https://www.tensorflow.org/install/pip#windows-wsl2)
+- 2. Installation Tensorflow with Applications
+    - (New) [Install Tensorflow/Keras in WSL2 for Applications of Deep Neural Networks](https://www.youtube.com/watch?v=KinTNHO-6IY&t=316s&ab_channel=JeffHeaton)
+        - [Git Link](https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-march-2023.ipynb)
 
 Other Links open: 
+- [Official tensorflow installation Guide](https://www.tensorflow.org/install/pip#windows-wsl2)
 - https://www.youtube.com/watch?v=StH5YNrY0mE&t=127s&ab_channel=KrishNaik
 - https://www.youtube.com/watch?v=r9IqwpMR9TE&t=616s&ab_channel=PythonSimplified
 
@@ -30,12 +33,14 @@ Other Links open:
 
 <hr />
 
-### Installation Tensorflow on GPU Desktop
+### 1. Installation Tensorflow on GPU Desktop
 - WSL, Miniconda, verv, CUDA and cuDNN
 - (NEW) [Installation steps on YT by Jeff](https://www.youtube.com/watch?v=0S81koZpwPA&ab_channel=JeffHeaton)
 
-1.1 Download and install [NVIDIA drivers](https://www.nvidia.com/download/index.aspx) for your GPU
-1.2. Install WSL 
+1. Install NVIDIA drivers and WSL2
+
+    - Download and install [NVIDIA drivers](https://www.nvidia.com/download/index.aspx) for your GPU
+    <br> <br>
     - Open "Windows PowerShell"
     - \Users\vibud> wsl --install <br>
     (installs ubuntu by default)
@@ -113,9 +118,22 @@ Other Links open:
 
 <hr />
 
-### Installation Pytorch on GPU Desktop
+### Installation Tensorflow with Applications
+
+- (New) [Install Tensorflow/Keras in WSL2 for Applications of Deep Neural Networks](https://www.youtube.com/watch?v=KinTNHO-6IY&t=316s&ab_channel=JeffHeaton)
+- [Git Link](https://github.com/jeffheaton/t81_558_deep_learning/blob/master/install/tensorflow-install-march-2023.ipynb)
 - WSL, Miniconda, verv, CUDA and cuDNN
-- Follow steps 1, 2, and 3 
+
+Steps:
+- Follow steps 1, and 2. Install NVIDIA drivers and create a WSL env 
+- (base)>>conda install jupyter 
+- Download tool.yml file (cuda + cuDNN any other tools )
+
+
+
+
+
+
 - name the verv as pytorch insteam of tf
 
 
