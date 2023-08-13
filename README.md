@@ -30,5 +30,6 @@ Other Links open:
 - CUDA Links:
     - [NVIDIA CUDA installation guide for Windows](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
     - [CUDA Quick Start Guide](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html#:~:text=The%20Network%20Installer%20allows%20you,to%20the%20Windows%20Installation%20Guide.)
+    - [CUDA Samples](https://github.com/NVIDIA/cuda-samples/tree/master/Samples/5_Domain_Specific/nbody)
 
 - [Tensorflow for WSL2](https://www.tensorflow.org/install/pip#windows-wsl2)
