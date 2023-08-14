@@ -24,10 +24,21 @@
 	- jupyter kernelspec remove <kernel-name>
 
 #### 5. Uninstall wsl for windows 11
-cmd
->>wsl -l -v
->> wsl --unregister ubuntu
-
+1. Unrehgister wsl 
+	- cmd <br>
+	- >>wsl -l -v <br>
+	- >> wsl --unregister ubuntu <br>
+2. Open Add or remove programs in windows 
+	- Search and delete each one of them 
+		- "wsl" or "windows subsystem for linux"
+		- ubuntu 
+		- linux
+3. Uninstall WSL and Virtual Machine Platform
+[ref](https://www.makeuseof.com/uninstall-wsl-windows/#:~:text=Uninstall%20the%20WSL%20Components&text=Go%20to%20Settings%20>%20Apps%20>%20Apps,name%20and%20then%20click%20Uninstall.)
+	- Open the Windows Features panel by going to Settings > Apps > Optional Features > More Windows Features. You can also search for Windows Features and click Turn Windows features on or off.
+	- Scroll down the list of features to find and deselect the Windows Subsystem for Linux option.
+	- If you don't need to run any other virtual environments, you can also deselect the Virtual Machine Platform option.
+	- Click Ok, and then restart your computer.
 
 #### 5. open the directory in explorer 
 	# explorer.exe
