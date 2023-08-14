@@ -13,5 +13,5 @@ References
 	- [ref2](https://pytorch.org/get-started/locally/): Pytorch official guide
 - Install the appropriate version of pytorch 
     - (llama-2-on-GPU)>> conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-- (llama-2-on-GPU)>>jupyter notebook
+- (llama-2-on-GPU)>>pip install --upgrade jupyter charset_normalizer
 - Look at the notebook 01_GPU_vs_CPU.ipynb
