@@ -18,7 +18,7 @@
     - \Users\vibud> wsl --install <br>
     (installs ubuntu by default)
     - Reboot the system and set password
-2. Installing Miniconda, Jupyter, and TensorFlow
+2. Installing Miniconda, and Jupyter
 Miniconda
     - Open powershell 
     - Open wsl <br>
@@ -42,8 +42,6 @@ Install Jupyter
 
 
 
-
-
 - Sanity Check 
     a. Check Miniconda 
         - powershell <br>
@@ -58,10 +56,18 @@ Install Jupyter
         - (base)>> conda --version <br>
         conda 23.5.2
 
-3. Create a conda environment
+3. Install tensorflow and create a conda environment
     - Install tensorflow using Jeff's Yaml file <br>
     (base)>>wget https://raw.githubusercontent.com/jeffheaton/t81_558_deep_learning/master/tools.yml 
     - (base)>> conda env create -f tools.yml -n tensorflow
+
+        -Now this tools.yml is outdated with cudnn version
+        -So, open this file to view its contents <br>
+        >> cat tool.yml <br>
+        Check cuDNN version for your file from [cuDNN File](https://developer.nvidia.com/rdp/cudnn-download) 
+        - Now open, edit and save the correct file<br> 
+        >>nano tools.ml <br>
+        - cudnn=8.9.4
     - (base)>> conda activate tensorflow
     - (tensorflow)>> <br>
 
@@ -114,3 +120,33 @@ print(f"Pandas {pd.__version__}")
 print(f"Scikit-Learn {sk.__version__}")
 gpu = len(tf.config.list_physical_devices('GPU'))>0
 print("GPU is", "available" if gpu else "NOT AVAILABLE")
+
+
+
+
+- tools.yml file contents <br>
+channels:
+    - conda-forge
+dependencies:
+    - cudatoolkit=11.8.0 
+    - cudnn=8.6.0.163
+    - jupyter
+    - scikit-learn
+    - scipy
+    - pandas
+    - pandas-datareader
+    - matplotlib
+    - pillow
+    - tqdm
+    - requests
+    - h5py
+    - pyyaml
+    - flask
+    - boto3
+    - pip
+    - pip:
+        - tensorflow
+        - bayesian-optimization
+        - gym
+        - kaggle
+        
