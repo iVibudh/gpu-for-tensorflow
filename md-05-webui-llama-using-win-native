@@ -33,4 +33,19 @@
 - pip install git+https://github.com/huggingface/peft@27af2198225cbb9e049f548440f2bd0fba2204aa --force-reinstall --no-deps
 
 **Try to run the server again**
-- python server.py**
+- python server.py
+
+ <hr \>
+
+ **Install the model**
+- D:\web-ui-llama-2\text-generation-webui> python download-model.py TheBloke/vicuna-13b-v1.3-GPTQ
+
+- TheBloke/Llama-2-13B-chat-GPTQ (actual model used)
+
+**Run the UI**
+- Open Anaconda Prompt
+- conda activate tg
+- d:
+- cd D:\web-ui-llama-2\text-generation-webui
+- > python server.py
+
