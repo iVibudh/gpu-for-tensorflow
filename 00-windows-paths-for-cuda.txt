@@ -26,3 +26,10 @@ X----- conda install ipykernel
 python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
 
 python -m ipykernel install --user --name tensorflow --display-name "Python 3.9 (tensorflow)"
+
+
+Second attempt - updated
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\extras\CUPTI\lib64
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\extras\CUPTI\include
+C:\tools\cudnn-windows-x86_64-8.6.0.163_cuda11-archive\bin
+C:\tools\cudnn-windows-x86_64-8.6.0.163_cuda11-archive\include
