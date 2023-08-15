@@ -1,0 +1,36 @@
+
+## 04 webui deployment of llama-2 using Windows Native
+**this tutorial assumes conda and git are both installed on your computer**
+
+- conda create -n tg python=3.10.9
+- conda activate tg
+- pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+- git clone https://github.com/oobabooga/text-generation-webui.git
+- cd text-generation-webui
+- pip install -r requirements.txt
+
+**GPU only:**
+- pip uninstall -y llama-cpp-python
+- set CMAKE_ARGS="-DLLAMA_CUBLAS=on"
+- set FORCE_CMAKE=1
+- pip install llama-cpp-python --no-cache-dir
+
+**If you get: ERROR: Failed building wheel for llama-cpp-python**
+- set "CMAKE_ARGS=-DLLAMA_OPENBLAS=on"
+- set "FORCE_CMAKE=1"
+- pip install llama-cpp-python --no-cache-dir
+
+**Check if GPU device is available for text-generation-webui folder**
+- python -c "import torch; print(torch.cuda.is_available());"
+
+**Try to run the server**
+- python server.py**
+
+**If you get CUDA Setup failed despite GPU being available.:** 
+- pip install bitsandbytes-windows
+
+**If you get AttributeError: module 'bitsandbytes.nn' has no attribute 'Linear4bit'. Did you mean: 'Linear8bitLt'?**
+- pip install git+https://github.com/huggingface/peft@27af2198225cbb9e049f548440f2bd0fba2204aa --force-reinstall --no-deps
+
+**Try to run the server again**
+- python server.py**

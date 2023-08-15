@@ -15,3 +15,6 @@ References
     - (llama-2-on-GPU)>> conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 - (llama-2-on-GPU)>>pip install --upgrade jupyter charset_normalizer
 - Look at the notebook 01_GPU_vs_CPU.ipynb
+
+- run the following comand to checkk if GPU is available for torch 
+python -c "import torch; print(torch.cuda.is_available());"
