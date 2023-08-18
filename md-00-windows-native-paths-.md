@@ -1,5 +1,7 @@
 ### 00-windows-native-paths
 
+
+
 When you are installing CUDA for windows native environments then make sure that you add the cuda file paths to the stsyem paths for allowing it to run with your system commands
  <br> <br>
 
