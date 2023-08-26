@@ -11,6 +11,10 @@
     - Open "Windows PowerShell" or "CMD"
     - >>wsl 
 
+#### 2.1 Reset WSL password
+reset password on wsl 
+- https://itsfoss.com/reset-linux-password-wsl/#:~:text=The%20root%20user%20in%20WSL,root%20to%20reset%20the%20password 
+
 #### 3. Remove Conda environment
 - [Ref - FreecodeCamp](https://www.freecodecamp.org/news/how-to-delete-an-environment-in-conda/)
 - Remove conda env 
